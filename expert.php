@@ -76,3 +76,29 @@ for ($i = 0; $i < count($letter); $i++) {
 }
 
 print_r($arr); // Array ([0] => a, [1] => b, [2] => c, ...) a-z alphabetical array
+
+
+new_exercise(7);
+// === Exercise 7 ===
+// Have the result of the function say: "Welcome John Smith" or "No access"
+// Depending on the given information.
+function login(string $email, string $password)
+{
+    if($email == 'john@example.be' && $password == 'pocahontas') {
+        echo 'Welcome John';
+        echo ' Smith';
+        echo '<br>';
+    } else {
+        echo 'No access';
+        echo '<br>';
+    }
+    
+}
+/* do not change any code below */
+//should greet the user with his full name (John Smith)
+echo login('john@example.be', 'pocahontas');
+//Should say: no access
+echo login('john@example.be', 'dfgidfgdfg');
+//Should say: no access
+echo login('wrong@example', 'wrong');
+/* You can change code again */
