@@ -32,14 +32,12 @@ $monday = $week[0];
 echo $monday;
 
 
-
 new_exercise(3);
 // === Exercise 3 ===
 // This should echo ` "Debugged !" `, fix it so that that is the literal text echo'ed
 
 $str = "Debugged ! Also very fun";
 echo substr($str, 0, 10);
-
 
 
 new_exercise(4);
@@ -53,3 +51,14 @@ foreach($week as &$day){ //Used an "&" sign in front of it to make it changeable
     $day = substr($day, 0, -3);
 }
 print_r($week);
+
+
+new_exercise(5);
+// === Exercise 5 ===
+// The result should be: "Copyright © <current year> - BeCode"
+function copyright(int $year)
+{
+    echo "Copyright &copy; $year BeCode";
+}
+//print the copyright
+copyright(date('Y'));
