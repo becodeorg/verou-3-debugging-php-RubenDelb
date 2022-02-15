@@ -102,3 +102,27 @@ echo login('john@example.be', 'dfgidfgdfg');
 //Should say: no access
 echo login('wrong@example', 'wrong');
 /* You can change code again */
+
+
+new_exercise(8);
+// === Exercise 8 ===
+// Check if the link is containing one of the below parts and respond with the correct message
+function isLinkValid(string $link){
+    $unacceptables = array('https:','.doc','.pdf', '.jpg', '.jpeg', '.gif', '.bmp', '.png');
+    foreach ($unacceptables as $unacceptable) {
+        if (strpos($link, $unacceptable) !== false) {
+            return 'Unacceptable Found<br />';
+        }
+    }
+    echo 'Acceptable<br />'; // this has to be OUT of the foreach loop, otherwise the function return and stop the function.
+}
+//invalid link
+echo isLinkValid('http://www.google.com/hack.pdf');
+//invalid link
+echo isLinkValid('https://google.com');
+//VALID link
+echo isLinkValid('http://google.com');
+//VALID link
+echo isLinkValid('http://google.com/test.txt');
+
+
